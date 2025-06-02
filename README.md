@@ -1,6 +1,8 @@
 # ArdoiseNumerique
 Ce projet a été effectué dans le cadre de l'UE442-ENS d'Informatique embarquée du M1E3A de l'ENS Paris Saclay. Elaboré sur STM32IDE avec un microcontrôleur STM32G-DISCO.
 ---
+C'est une ardoise numérique sur laquelle, on peut dessiner de la couleur souhaitée et de taille souhaitée et gommer. Les autres fonctionnalités de dessin n'ont pas été implémentées à ce jour.
+---
 ## Interface Ecran
 ![PAint](https://github.com/user-attachments/assets/72bd83c8-361a-4530-afb6-fba360252926)
 
@@ -108,5 +110,6 @@ Reçoit les queues ```MenuGauche```, ```Mode```, ```MenuDroit```, ```Color```, `
 
 
 ## Schéma synoptique
+![Synoptic](https://github.com/user-attachments/assets/eee281d0-e236-4d53-aacf-57149e8eaaf3)
 
 
