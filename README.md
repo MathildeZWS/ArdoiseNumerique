@@ -2,29 +2,47 @@
 Ce projet a été effectué dans le cadre de l'UE442-ENS d'Informatique embarquée du M1E3A de l'ENS Paris Saclay. Elaboré sur STM32IDE avec un microcontrôleur STM32G-DISCO.
 ---
 ## Interface Ecran
+![PAint](https://github.com/user-attachments/assets/72bd83c8-361a-4530-afb6-fba360252926)
+
+🔴L'affichage des image bmp ne marche pas bien.
+
+**Menu mode/couleur possibles:**<br>
+![menu](https://github.com/user-attachments/assets/49e8bad0-239b-4296-9911-1c2829765791)
+
+**Grisage des dernières touches sélectionnées:**<br>
+
+![artist](https://github.com/user-attachments/assets/f32b81ea-913e-4dfc-8e79-af2d84633ef1)
+
+
 ## Fonctionnalités souhaitées
 L'interface permet à l'utilisateur de sélectionner dans le menu déroulant de gauche:
 - Le mode d'écriture :
   - Stylo
   - Gomme
-  - ligne (non implémenté)
-  - écriture de texte (non implémenté)
-- La taille du stylo :
-  - Stylo
-  - Gomme
-  - ligne (non implémentée)
- 
+  - ligne verticale (🔴non implémenté)
+  - ligne horizontale (🔴non implémenté)
+  - ligne oblique (🔴non implémenté)
+  - écriture de texte (🔴non implémenté)
+    
+- La taille du stylo
+
 - Le mode dessin de contours de formes :
-  - Stylo
-  - Gomme
-  - ligne (non implémentée)
+  - rectangle (🔴non implémenté)
+  - carré (🔴non implémenté)
+  - cercle (🔴non implémenté)
+  - ellipse (🔴non implémenté)
+  - polygone (🔴non implémenté)
+  - étoile (🔴non implémenté)
  
 - Le mode dessin de formes remplies :
-  - Stylo
-  - Gomme
-  - ligne (non implémentée) <br>
-L'interface permet à l'utilisateur de sélectionner dans le menu déroulant de droite, la couleur d'écriture associée.<br>
-(non implémenté) Sur la barre en haut , il est supposé saisir sur son clavier comment il souhaite nommer le fichier qui dans l'idée était supposé être enregistré sur la carte SD.
+  - rectangle (🔴non implémenté)
+  - carré (🔴non implémenté)
+  - cercle (🔴non implémenté)
+  - ellipse (🔴non implémenté)
+  - polygone (🔴non implémenté)
+  - triangle (🔴non implémenté)<br> <br>
+L'interface permet à l'utilisateur de sélectionner dans le menu déroulant de droite, la couleur d'écriture associée.<br> <br>
+Sur la barre en haut , il est supposé saisir sur son clavier comment il souhaite nommer le fichier qui dans l'idée était supposé être enregistré sur la carte SD. (🔴 non implémenté) 
 ---
 ## Organisation des tâches 
 **Structures**<br>
@@ -45,7 +63,7 @@ Un certain nombre de queues sont utilisées pour communiquer entre les tâches:
 - ```Color```
 - ```Mode```
 - ```TailleStylo```<br>
-<br>**Tâches**<br>
+**Tâches**<br>
 L'organisation est répartie en 4 tâches:
 - ```TacheAppui```(```DetectionAppui```) : se charge de la détection de l'appui sur l'écran<br>
    - Si on touche l'écran blanc (zone de dessin) <br>→ Envoie les coordonnées touchées dans la queue ```Ecran```
@@ -92,7 +110,3 @@ Reçoit les queues ```MenuGauche```, ```Mode```, ```MenuDroit```, ```Color```, `
 ## Schéma synoptique
 
 
-
-
-
-## touche artistique 
