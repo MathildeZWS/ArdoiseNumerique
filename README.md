@@ -1,5 +1,5 @@
 # ArdoiseNumerique
-Ce projet a été effectué dans le cadre de l'UE442-ENS d'Informatique embarquée du M1E3A de l'ENS Paris Saclay.
+Ce projet a été effectué dans le cadre de l'UE442-ENS d'Informatique embarquée du M1E3A de l'ENS Paris Saclay. Elaboré sur STM32IDE avec un microcontrôleur STM32G-DISCO.
 ---
 ## Interface Ecran
 ## Fonctionnalités souhaitées
@@ -62,13 +62,13 @@ Reçoit les queues ```FlecheGauche``` et ```ModeAppuyee```.
       
 -  ```TacheCouleur```(```Couleur```): se charge d'agir en conséquence quand on a appuyé sur les flèches du menu de droite ou les cases de sélection de la couleur <br>
 Reçoit les queues ```FlecheDroite``` et ```CouleurAppuyee```.
-  - - appui d'une flèche <br> → fait changer le numéro du menu_droit et l'envoie dans la queue ```MenuDroit```
-  - - appui d'une couleur <br> → envoie le numéro de la case associée dans la queue  ```Color ```
+  -  appui d'une flèche <br> → fait changer le numéro du menu_droit et l'envoie dans la queue ```MenuDroit```
+  - appui d'une couleur <br> → envoie le numéro de la case associée dans la queue  ```Color ```
     <br> → envoie le numéro de liste de couleurs dans la queue  ```CouleurSelectionnee```
    
 - ```TacheDisplay``` (```Affichage```): se charge de tout l'affichage <br>
 Affiche un affichage initial au premier lancement de la tâche.<br>
-Reçoit ```MenuGauche```, ```Mode```,``MenuDroit```, ```Color```
+Reçoit les queues ```MenuGauche```, ```Mode```, ```MenuDroit```, ```Color```, ```CouleurSelectionnee```, ```TailleStylo```, ```Ecran```.
   - ```MenuGauche``` reçu : <br>
 → affiche le menu mode correspondant
   - ```Mode``` reçu : <br>
@@ -77,6 +77,18 @@ Reçoit ```MenuGauche```, ```Mode```,``MenuDroit```, ```Color```
 → affiche le menu couleur correspondant
   -  ```Color``` reçu : <br>
 → grise la case couleur correspondante
+  -  ```CouleurSelectionnee`` reçu : <br>
+→   récupère la couleur sélectionnée
+  -  ```CouleurSelectionnee`` reçu : <br>
+→   récupère la couleur sélectionnée
+  -  ```TailleStylo`` reçu : <br>
+→   récupère la taille du stylo
+   -  ```Ecran``` reçu : <br>
+→   récupère les coordonnées et dessine selon le mode choisi avec la taille du stylo et la couleur choisis.
+<br> 🔴 seulement le mode stylo et gomme ont été implémentés à ce jour. 🔴
+
+
+
 ## Schéma synoptique
 
 
