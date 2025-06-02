@@ -3,7 +3,29 @@ Ce projet a été effectué dans le cadre de l'UE442-ENS d'Informatique embarqu�
 
 ---
 ## Organisation des tâches 
-Le 
+**Queues**<br>
+Un certain nombre de queues sont utilisées pour communiquer entre les tâches:
+- ```CouleurAppuyee```
+- ```Ecran```
+- ```ModeAppuyee```
+- ```ToucheAppuyee```
+- ```FlecheDroite```
+- ```FlecheGauche```
+
+**Tâches**<br>
+L'organisation est répartie en 4 tâches:
+- ```TacheAppui``` : se charge de la détection de l'appui sur l'écran<br>
+   - Si on touche l'écran blanc (zone de dessin) <br>→ Envoie les coordonnées touchées dans la queue ```Ecran```
+  - Si on touche les touches couleurs du menu de droite <br>→ Envoie la structure ```Touche``` correspondant au bouton appuyé dans la queue ```CouleurAppuyee```
+  - Si on touche les touches mode de dessin du menu de gauche <br>→ Envoie la structure ```Touche``` correspondant au bouton appuyé dans la queue ```ModeAppuyee```
+- ```TacheMode```: se charge de tout l'affichage
+-  ```TacheCouleur```: se charge de tout l'affichage
+- ```TacheDisplay```: se charge de tout l'affichage
+
+**Structures**<br>
+Des structures supplémentaires ont été implémentées:
+- ```Touche```: comprend le nom, le coin supérieur gauche x, le coin supérieur gauche y et la hauteur du bouton
+- ```Appui```: comprend les coordonnées x et y 
 ## Schéma synoptique
 
 
