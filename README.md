@@ -11,13 +11,17 @@ Un certain nombre de queues sont utilisées pour communiquer entre les tâches:
 - ```ToucheAppuyee```
 - ```FlecheDroite```
 - ```FlecheGauche```
-
+- ```MenuGauche```
+- ```MenuDroit```
 **Tâches**<br>
 L'organisation est répartie en 4 tâches:
 - ```TacheAppui``` : se charge de la détection de l'appui sur l'écran<br>
    - Si on touche l'écran blanc (zone de dessin) <br>→ Envoie les coordonnées touchées dans la queue ```Ecran```
   - Si on touche les touches couleurs du menu de droite <br>→ Envoie la structure ```Touche``` correspondant au bouton appuyé dans la queue ```CouleurAppuyee```
   - Si on touche les touches mode de dessin du menu de gauche <br>→ Envoie la structure ```Touche``` correspondant au bouton appuyé dans la queue ```ModeAppuyee```
+  - Si on touche la touche *Enregistrer* ou la zone de saisie du nom de fichier <br>→ Envoie la structure ```Touche``` correspondant au bouton appuyé dans la queue ```ToucheAppuyee```
+  - Si on touche les flèches du menu déroulant de gauche / droite <br>→ Envoie la structure ```Touche``` correspondant au bouton flèche appuyé dans la queue ```FlecheGauche```/```FlecheDroite```
+
 - ```TacheMode```: se charge de tout l'affichage
 -  ```TacheCouleur```: se charge de tout l'affichage
 - ```TacheDisplay```: se charge de tout l'affichage
