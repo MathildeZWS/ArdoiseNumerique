@@ -97,11 +97,11 @@ Reçoit les queues ```MenuGauche```, ```Mode```, ```MenuDroit```, ```Color```, `
 → affiche le menu couleur correspondant
   -  ```Color``` reçu : <br>
 → grise la case couleur correspondante
-  -  ```CouleurSelectionnee`` reçu : <br>
+  -  ```CouleurSelectionnee``` reçu : <br>
 →   récupère la couleur sélectionnée
-  -  ```CouleurSelectionnee`` reçu : <br>
+  -  ```CouleurSelectionnee``` reçu : <br>
 →   récupère la couleur sélectionnée
-  -  ```TailleStylo`` reçu : <br>
+  -  ```TailleStylo``` reçu : <br>
 →   récupère la taille du stylo
    -  ```Ecran``` reçu : <br>
 →   récupère les coordonnées et dessine selon le mode choisi avec la taille du stylo et la couleur choisis.
